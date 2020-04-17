@@ -4,19 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <LinearLayout
+    tools:context=".MainActivity"
+    >
+    <FrameLayout
         android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="match_parent">
-        <androidx.recyclerview.widget.RecyclerView
+        android:layout_height="match_parent"
+        android:id="@+id/container"
+        >
+        <!-- Main content -->
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/navigationBar"
             android:layout_width="match_parent"
-            android:layout_height="490dp"/>
-            <com.google.android.material.bottomnavigation.BottomNavigationView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:menu="@menu/bottom_navigation"
-                android:background="?android:attr/windowBackground"/>
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/colorGrey"
+            android:layout_below = "@+id/container"
+            app:itemBackground="@color/colorGrey"
+            app:menu="@menu/bottom_navigation"
+            />
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
