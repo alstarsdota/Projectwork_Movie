@@ -22,7 +22,7 @@
 
             <ImageView
                 android:id="@+id/main_poster"
-                android:layout_width="match_parent"
+                android:layout_width="170dp"
                 android:layout_height="260dp"
                 android:background="@color/colorGrey"
                 android:padding="6dp"
